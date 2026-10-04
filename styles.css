@@ -256,3 +256,17 @@
  .why-strip p b{font-size:16px}
  .why-strip p small{font-size:10px}
 }
+
+
+/* Membership capacity counters */
+.capacity-meter{margin:-4px 0 22px;padding:15px 16px 13px;background:linear-gradient(135deg,#111,#080808);border:1px solid #282828}
+.capacity-count{display:flex;align-items:center;gap:9px}
+.capacity-dot{width:9px;height:9px;border-radius:50%;background:var(--red);box-shadow:0 0 12px rgba(227,19,28,.55);flex:0 0 auto}
+.capacity-count strong{font:900 20px/1 "Barlow Condensed",sans-serif;color:#fff;letter-spacing:.5px}
+.capacity-label{display:block;margin:5px 0 9px 18px;font:800 10px/1 Inter,sans-serif;letter-spacing:1.6px;color:#aaa}
+.capacity-track{height:3px;background:#292929;overflow:hidden}
+.capacity-track i{display:block;height:100%;background:var(--red)}
+.capacity-meter small{display:block;margin-top:8px;font:700 9px/1 Inter,sans-serif;letter-spacing:1px;color:#666}
+.founding-tier .capacity-meter{border-color:#4a1b1e}
+.vip-tier .capacity-dot{background:#d7d7d7;box-shadow:0 0 12px rgba(255,255,255,.22)}
+.vip-tier .capacity-track i{background:#d7d7d7}
