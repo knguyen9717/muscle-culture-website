@@ -377,7 +377,7 @@
 
 /* Female athlete image for About section */
 .about-image{
-  background-image:url("assets/female-bodybuilder-about.png")!important;
+  background-image:url("assets/female-bodybuilder-about.png?v=2")!important;
   background-size:cover!important;
   background-position:26% center!important;
 }
