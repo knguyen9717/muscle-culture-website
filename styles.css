@@ -74,3 +74,13 @@
 .athlete-dot{width:7px;height:7px;border:0;border-radius:50%;background:#484848;padding:0;cursor:pointer}.athlete-dot.active{background:var(--red)}
 .athlete-carousel.single-slide .athlete-arrow{opacity:.22;cursor:default}
 @media(max-width:800px){.athlete-carousel{margin-top:30px;padding:0 0 24px}.athlete-arrow{width:32px;height:48px;background:#050505b8}.athlete-prev{left:5px}.athlete-next{right:5px}}
+
+/* Compact athlete carousel sizing */
+.athlete-feature-section{padding-top:70px!important;padding-bottom:65px!important}
+.athlete-feature-section .athlete-intro{margin-bottom:0!important}
+.athlete-carousel{max-width:820px!important;margin:28px auto 0!important;padding:0 42px 20px!important}
+.athlete-arrow{width:34px!important;height:50px!important}
+@media(max-width:800px){
+  .athlete-feature-section{padding-top:52px!important;padding-bottom:48px!important}
+  .athlete-carousel{max-width:100%!important;margin-top:22px!important;padding:0 0 18px!important}
+}
