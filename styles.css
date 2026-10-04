@@ -373,3 +373,14 @@
   border-color:var(--red)!important;
   box-shadow:0 0 0 1px rgba(227,19,28,.28),0 0 26px rgba(227,19,28,.12)!important;
 }
+
+
+/* Female athlete image for About section */
+.about-image{
+  background-image:url("assets/female-bodybuilder-about.png")!important;
+  background-size:cover!important;
+  background-position:26% center!important;
+}
+@media(max-width:800px){
+  .about-image{background-position:22% center!important}
+}
