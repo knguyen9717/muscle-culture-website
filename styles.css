@@ -101,3 +101,12 @@
  .athlete-carousel{width:86vw!important;max-width:420px!important;padding:0 0 14px!important;box-sizing:border-box!important}
  .athlete-slides,.athlete-slide img{width:100%!important;max-width:100%!important}
 }
+
+/* Athlete carousel size adjustment */
+.athlete-carousel{width:500px!important;max-width:500px!important}
+.athlete-slides{width:500px!important;max-width:500px!important}
+.athlete-slide img{width:500px!important}
+@media(max-width:600px){
+ .athlete-carousel{width:90vw!important;max-width:500px!important}
+ .athlete-slides,.athlete-slide img{width:100%!important;max-width:100%!important}
+}
