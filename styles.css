@@ -62,3 +62,15 @@
 .athlete-feature-banner{margin-top:42px;border:1px solid #242424;background:#000;overflow:hidden}
 .athlete-feature-banner img{display:block;width:100%;height:auto;object-fit:contain}
 @media(max-width:800px){.athlete-feature-banner{margin-top:30px}}
+
+/* Athlete carousel */
+.athlete-carousel{max-width:1160px;margin:42px auto 0;position:relative;padding:0 46px 28px}
+.athlete-slides{overflow:hidden;border:1px solid #242424;background:#000}
+.athlete-slide{display:none}.athlete-slide.active{display:block}
+.athlete-slide img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.athlete-arrow{position:absolute;top:calc(50% - 28px);transform:translateY(-50%);width:38px;height:58px;border:1px solid #333;background:#0b0b0be8;color:#fff;font:300 34px/1 Inter;cursor:pointer;z-index:3}
+.athlete-arrow:hover{border-color:var(--red);color:var(--red)}.athlete-prev{left:0}.athlete-next{right:0}
+.athlete-dots{height:20px;display:flex;justify-content:center;align-items:flex-end;gap:8px}
+.athlete-dot{width:7px;height:7px;border:0;border-radius:50%;background:#484848;padding:0;cursor:pointer}.athlete-dot.active{background:var(--red)}
+.athlete-carousel.single-slide .athlete-arrow{opacity:.22;cursor:default}
+@media(max-width:800px){.athlete-carousel{margin-top:30px;padding:0 0 24px}.athlete-arrow{width:32px;height:48px;background:#050505b8}.athlete-prev{left:5px}.athlete-next{right:5px}}
