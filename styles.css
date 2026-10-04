@@ -140,3 +140,12 @@
 /* Make regular membership price unmistakable */
 .regular-price del{font-size:25px!important;font-weight:900!important;color:#d8d8d8!important;text-decoration-color:#e51b23!important;text-decoration-thickness:3px!important;text-decoration-skip-ink:none}
 .regular-price-label{color:#b8b8b8!important}
+
+/* Membership price comparison */
+.membership-comparison{display:flex;gap:34px;margin:4px 0 10px;padding-top:15px;border-top:1px solid #292929}
+.membership-comparison>div{display:flex;flex-direction:column;gap:5px}
+.membership-comparison span{font:700 11px/1 "Inter",sans-serif;letter-spacing:.08em;color:#aaa}
+.membership-comparison strong{font:800 25px/1 "Barlow Condensed",sans-serif;color:#eee}
+.membership-comparison small{font:700 12px/1 "Inter",sans-serif;color:#888}
+.founder-savings{margin:0 0 9px!important;font:800 12px/1.4 "Inter",sans-serif!important;letter-spacing:.04em;color:#e51b23!important}
+@media(max-width:800px){.membership-comparison{gap:24px;flex-wrap:wrap}}
