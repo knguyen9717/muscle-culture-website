@@ -326,3 +326,26 @@
 .selectable-option.selected{border-color:var(--red)!important;box-shadow:0 0 0 1px rgba(227,19,28,.28),0 0 26px rgba(227,19,28,.12)}
 .selectable-option.selected:after{border-color:var(--red);background:var(--red);box-shadow:0 0 0 4px rgba(227,19,28,.14),0 0 12px rgba(227,19,28,.55)}
 .selectable-option.selected:before{content:"";position:absolute;top:22px;right:22px;width:7px;height:7px;border-radius:50%;background:#fff;z-index:9}
+
+
+/* Editorial Why Muscle Culture section — intentionally distinct from equipment cards */
+.why-editorial{background:linear-gradient(135deg,#050505 0%,#0b0b0b 55%,#070707 100%);border-top:1px solid #1d1d1d;border-bottom:1px solid #1d1d1d}
+.why-editorial-head{display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:end;margin-bottom:54px}
+.why-editorial-head h2{margin:6px 0 0;font:900 clamp(44px,5.3vw,82px)/.88 "Barlow Condensed",sans-serif;letter-spacing:-1.5px;color:#fff}
+.why-editorial-head h2 span{color:var(--red)}
+.why-editorial-intro{max-width:520px;margin:0 0 5px;color:#999;font-size:14px;line-height:1.75}
+.why-editorial-points{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #2b2b2b}
+.why-editorial-points article{position:relative;padding:29px 28px 8px 0;margin-right:28px;border-right:1px solid #292929;min-height:155px}
+.why-editorial-points article:last-child{border-right:0;margin-right:0}
+.why-editorial-points span{display:block;margin-bottom:20px;font:900 13px/1 Inter,sans-serif;color:var(--red);letter-spacing:1px}
+.why-editorial-points h3{margin:0 0 11px;font:900 24px/1 "Barlow Condensed",sans-serif;color:#fff}
+.why-editorial-points p{margin:0;color:#888;font-size:11px;line-height:1.65;max-width:245px}
+@media(max-width:900px){
+ .why-editorial-head{grid-template-columns:1fr;gap:24px;margin-bottom:38px}
+ .why-editorial-points{grid-template-columns:1fr 1fr}
+ .why-editorial-points article{border-bottom:1px solid #292929}
+}
+@media(max-width:560px){
+ .why-editorial-points{grid-template-columns:1fr}
+ .why-editorial-points article{margin-right:0;border-right:0;padding-right:0}
+}
