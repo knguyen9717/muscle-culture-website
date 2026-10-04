@@ -30,6 +30,6 @@ document.getElementById("waitlist").addEventListener("submit",(e)=>{
   }
   prev.addEventListener("click",()=>show(current-1,true));
   next.addEventListener("click",()=>show(current+1,true));
-  function restart(){clearInterval(timer);if(slides.length>1)timer=setInterval(()=>show(current+1),7000)}
+  function restart(){clearInterval(timer);if(slides.length>1)timer=setInterval(()=>show(current+1),4000)}
   restart();
 })();
