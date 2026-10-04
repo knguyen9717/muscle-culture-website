@@ -92,3 +92,12 @@
 @media(max-width:800px){
   .athlete-carousel{width:88%!important;max-width:520px!important;padding:0 0 16px!important}
 }
+
+/* Final compact athlete carousel */
+.athlete-carousel{width:420px!important;max-width:420px!important;margin:20px auto 0!important;padding:0 30px 14px!important;box-sizing:content-box!important}
+.athlete-slides{width:420px!important;max-width:420px!important}
+.athlete-slide img{width:420px!important;height:auto!important;aspect-ratio:16/9!important;object-fit:contain!important}
+@media(max-width:600px){
+ .athlete-carousel{width:86vw!important;max-width:420px!important;padding:0 0 14px!important;box-sizing:border-box!important}
+ .athlete-slides,.athlete-slide img{width:100%!important;max-width:100%!important}
+}
