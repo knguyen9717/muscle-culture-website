@@ -209,3 +209,10 @@
 .mini-benefits p:before{content:"✓";position:absolute;left:0;color:#e51b23;font-weight:900}
 .prepaid-card .btn,.pass-card .btn{margin-top:auto;text-align:center}
 @media(max-width:900px){.pass-cards{grid-template-columns:1fr}.prepaid-cards{grid-template-columns:1fr}.prepaid-card,.pass-card{min-height:0}}
+
+/* Prepaid plan price presentation */
+.prepaid-price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:12px 0 10px}
+.prepaid-price .was-price{font:700 17px/1 "Barlow Condensed",sans-serif;color:#666;text-decoration:line-through;text-decoration-color:#e51b23;text-decoration-thickness:2px}
+.prepaid-price strong{font:900 48px/.9 "Barlow Condensed",sans-serif;color:#fff}
+.featured-prepaid .prepaid-price strong{color:#e51b23}
+.prepaid-price small{font:700 9px/1 Inter,sans-serif;letter-spacing:.08em;color:#777}
