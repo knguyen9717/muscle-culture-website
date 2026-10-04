@@ -45,3 +45,14 @@
 .athlete-grid .athlete-caption-static strong{display:block;color:#fff;font:900 27px/1 "Barlow Condensed";letter-spacing:.5px}
 .athlete-grid .athlete-caption-static small{display:block;color:var(--red);font:700 10px/1.4 Inter;letter-spacing:1.3px;margin-top:8px}
 @media(max-width:700px){.athlete-grid .athlete-photo-wrap{height:500px}}
+
+/* Compact athlete wall cards */
+.athlete-grid{align-items:start}
+.athlete-grid .athlete-card{height:430px!important}
+.athlete-grid .athlete-featured{display:grid!important;grid-template-rows:350px 80px;background:#080808!important}
+.athlete-grid .athlete-photo-wrap{height:350px!important;width:100%;background:#000!important}
+.athlete-grid .athlete-photo-wrap img{width:100%;height:100%;object-fit:contain!important;object-position:center!important}
+.athlete-grid .athlete-caption-static{height:80px!important;min-height:80px!important;padding:15px 18px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;background:#0b0b0b!important}
+.athlete-grid .athlete-caption-static strong{font-size:24px!important}
+.athlete-grid .athlete-caption-static small{font-size:9px!important;margin-top:6px!important}
+@media(max-width:800px){.athlete-grid .athlete-card{height:430px!important}.athlete-grid .athlete-featured{grid-template-rows:350px 80px!important}}
