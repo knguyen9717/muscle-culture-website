@@ -297,3 +297,14 @@
 .equipment-lineup-btn{min-width:360px;background:#070707;border-color:var(--red);box-shadow:0 0 22px rgba(227,19,28,.15)}
 @media(max-width:1100px){.equipment-visual-cards{grid-template-columns:1fr 1fr}.equipment-visual-card{min-height:440px}}
 @media(max-width:650px){.equipment-visual-cards{grid-template-columns:1fr}.equipment-visual-card{min-height:430px}.equipment-lineup-btn{min-width:0;width:100%}.equipment-card-copy p{min-height:0}}
+
+
+/* Approved equipment showcase mockup */
+.equipment-mockup-section{background:#050505;width:100%;overflow:hidden;border-top:1px solid #181818;border-bottom:1px solid #181818}
+.equipment-mockup-link{display:block;width:100%;line-height:0}
+.equipment-mockup-link img{display:block;width:100%;height:auto;max-width:none;margin:0 auto}
+@media(max-width:700px){
+ .equipment-mockup-section{overflow-x:auto}
+ .equipment-mockup-link{width:1050px;max-width:none}
+ .equipment-mockup-link img{width:1050px;max-width:none}
+}
