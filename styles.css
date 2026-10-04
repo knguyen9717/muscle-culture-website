@@ -270,3 +270,30 @@
 .founding-tier .capacity-meter{border-color:#4a1b1e}
 .vip-tier .capacity-dot{background:#d7d7d7;box-shadow:0 0 12px rgba(255,255,255,.22)}
 .vip-tier .capacity-track i{background:#d7d7d7}
+
+
+/* Premium visual equipment showcase */
+.equipment-showcase{position:relative;overflow:hidden;background:radial-gradient(circle at 50% 30%,#171717 0,#080808 48%,#030303 100%)}
+.equipment-showcase:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.5));pointer-events:none}
+.equipment-showcase>*{position:relative;z-index:1}
+.equipment-visual-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:42px}
+.equipment-visual-card{position:relative;min-height:475px;overflow:hidden;border:1px solid #454545;border-radius:5px;background-color:#0a0a0a;background-size:cover;background-position:center;box-shadow:inset 0 -110px 90px #050505,0 12px 30px rgba(0,0,0,.35);transition:transform .25s,border-color .25s,box-shadow .25s}
+.equipment-visual-card:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.12) 38%,rgba(0,0,0,.93) 70%,#050505 100%)}
+.equipment-visual-card:hover{transform:translateY(-5px);border-color:var(--red);box-shadow:inset 0 -110px 90px #050505,0 0 26px rgba(227,19,28,.18)}
+.plate-card{background-image:url("assets/equipment/b19-tbar-linear-row.webp")}
+.freeweight-card{background-image:linear-gradient(rgba(0,0,0,.08),rgba(0,0,0,.25)),url("assets/muscle-culture-hero-bodybuilder.png");background-position:15% center}
+.selector-card{background-image:url("assets/equipment/c6-xpload-linear-chest-press.webp")}
+.posing-card{background-image:linear-gradient(135deg,#181818,#060606 65%);background-size:cover}
+.posing-card:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 17%,rgba(255,255,255,.08) 17.3% 17.8%,transparent 18.1% 34%);opacity:.35}
+.equipment-number{position:absolute;top:12px;left:20px;z-index:2;font:900 82px/.9 "Barlow Condensed";color:rgba(255,255,255,.16)}
+.equipment-icon{position:absolute;z-index:3;left:24px;bottom:184px;color:var(--red);font:900 34px/1 "Barlow Condensed";text-shadow:0 0 15px rgba(227,19,28,.3)}
+.equipment-card-copy{position:absolute;z-index:4;left:0;right:0;bottom:0;padding:24px 24px 22px}
+.equipment-card-copy h3{margin:0;font:900 31px/.95 "Barlow Condensed";color:#fff}
+.equipment-card-copy i{display:block;width:46px;height:3px;background:var(--red);margin:14px 0}
+.equipment-card-copy p{min-height:58px;margin:0 0 18px;color:#b7b7b7;font-size:12px;line-height:1.55}
+.equipment-card-copy b{font:900 15px "Barlow Condensed";color:#fff;letter-spacing:.5px}
+.equipment-card-copy b em{font-style:normal;color:var(--red);font-size:20px;margin-left:8px}
+.equipment-page-link{text-align:center;margin-top:30px}
+.equipment-lineup-btn{min-width:360px;background:#070707;border-color:var(--red);box-shadow:0 0 22px rgba(227,19,28,.15)}
+@media(max-width:1100px){.equipment-visual-cards{grid-template-columns:1fr 1fr}.equipment-visual-card{min-height:440px}}
+@media(max-width:650px){.equipment-visual-cards{grid-template-columns:1fr}.equipment-visual-card{min-height:430px}.equipment-lineup-btn{min-width:0;width:100%}.equipment-card-copy p{min-height:0}}
