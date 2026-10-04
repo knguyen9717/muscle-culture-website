@@ -349,3 +349,12 @@
  .why-editorial-points{grid-template-columns:1fr}
  .why-editorial-points article{margin-right:0;border-right:0;padding-right:0}
 }
+
+
+/* Keep selection control clear of Best Value badge */
+.featured-prepaid.selectable-option:after,
+.featured-pass.selectable-option:after{top:22px;right:20px}
+.featured-prepaid.selectable-option.selected:before,
+.featured-pass.selectable-option.selected:before{top:26px;right:24px}
+.featured-prepaid .best-value,
+.featured-pass .best-value{right:54px}
