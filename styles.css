@@ -216,3 +216,6 @@
 .prepaid-price strong{font:900 48px/.9 "Barlow Condensed",sans-serif;color:#fff}
 .featured-prepaid .prepaid-price strong{color:#e51b23}
 .prepaid-price small{font:700 9px/1 Inter,sans-serif;letter-spacing:.08em;color:#777}
+
+/* Tax labels */
+.pass-price small{align-self:flex-end;margin:0 0 5px 8px;font:800 10px/1 Inter,sans-serif;letter-spacing:.08em;color:#888}
