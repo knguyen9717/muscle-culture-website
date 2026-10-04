@@ -186,3 +186,26 @@
 .option-card small{margin-top:auto;font:700 9px/1 Inter,sans-serif;letter-spacing:.08em;color:#666}
 @media(max-width:900px){.membership-options{grid-template-columns:1fr}.option-cards{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.option-cards{grid-template-columns:1fr}}
+
+/* Membership prepaid plans + visitor passes */
+.prepaid-section,.passes-section{margin-top:58px;padding-top:42px;border-top:1px solid #252525}
+.subsection-heading{max-width:700px;margin-bottom:25px}.subsection-heading.centered{margin-left:auto;margin-right:auto;text-align:center}
+.subsection-heading h3{margin:0 0 9px;font:900 36px/1 "Barlow Condensed",sans-serif;color:#fff}
+.subsection-heading>p:last-child{margin:0!important;color:#929292!important;font-size:13px!important;line-height:1.6!important}
+.prepaid-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:850px;margin:auto}
+.pass-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.prepaid-card,.pass-card{position:relative;display:flex;flex-direction:column;min-height:425px;padding:27px;background:#0d0d0d;border:1px solid #303030}
+.featured-prepaid,.featured-pass{border-color:#e51b23;box-shadow:inset 0 3px 0 #e51b23}
+.best-value{position:absolute;right:22px;top:20px;padding:6px 9px;border-radius:20px;background:#e51b23;color:#fff;font:800 9px/1 Inter,sans-serif;letter-spacing:.08em}
+.plan-kicker{color:#e51b23;font:800 10px/1 Inter,sans-serif;letter-spacing:.1em}
+.prepaid-card h4,.pass-card h4{margin:13px 0 5px;font:900 30px/1 "Barlow Condensed",sans-serif;color:#fff}
+.pass-price{display:flex;align-items:flex-start;margin:11px 0 8px;color:#fff}
+.pass-price sup{margin:7px 4px 0 0;font:500 24px/1 "Barlow Condensed",sans-serif}
+.pass-price strong{font:900 53px/.9 "Barlow Condensed",sans-serif}
+.prepaid-card .pass-price strong{font-size:28px;color:#aaa}
+.prepaid-card>p,.pass-card>p{margin:0 0 18px!important;color:#8f8f8f!important;font-size:12px!important}
+.mini-benefits{margin:5px 0 24px;border-top:1px solid #252525}
+.mini-benefits p{position:relative;margin:0!important;padding:12px 0 12px 20px;border-bottom:1px solid #202020;color:#bbb!important;font-size:11px!important;line-height:1.4!important}
+.mini-benefits p:before{content:"✓";position:absolute;left:0;color:#e51b23;font-weight:900}
+.prepaid-card .btn,.pass-card .btn{margin-top:auto;text-align:center}
+@media(max-width:900px){.pass-cards{grid-template-columns:1fr}.prepaid-cards{grid-template-columns:1fr}.prepaid-card,.pass-card{min-height:0}}
