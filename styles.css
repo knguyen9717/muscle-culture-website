@@ -56,3 +56,9 @@
 .athlete-grid .athlete-caption-static strong{font-size:24px!important}
 .athlete-grid .athlete-caption-static small{font-size:9px!important;margin-top:6px!important}
 @media(max-width:800px){.athlete-grid .athlete-card{height:430px!important}.athlete-grid .athlete-featured{grid-template-rows:350px 80px!important}}
+
+/* Full-width athlete feature banner */
+.athlete-feature-section{background:#060606}
+.athlete-feature-banner{margin-top:42px;border:1px solid #242424;background:#000;overflow:hidden}
+.athlete-feature-banner img{display:block;width:100%;height:auto;object-fit:contain}
+@media(max-width:800px){.athlete-feature-banner{margin-top:30px}}
