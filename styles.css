@@ -308,3 +308,12 @@
  .equipment-mockup-link{width:1050px;max-width:none}
  .equipment-mockup-link img{width:1050px;max-width:none}
 }
+
+
+/* Approved Why Muscle Culture visual showcase */
+.why-showcase-section{width:100%;background:#030303;overflow:hidden;border-top:1px solid #151515;border-bottom:1px solid #151515;line-height:0}
+.why-showcase-section img{display:block;width:100%;height:auto;max-width:none}
+@media(max-width:700px){
+ .why-showcase-section{overflow-x:auto}
+ .why-showcase-section img{width:1100px;max-width:none}
+}
