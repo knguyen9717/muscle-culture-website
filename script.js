@@ -33,3 +33,19 @@ document.getElementById("waitlist").addEventListener("submit",(e)=>{
   function restart(){clearInterval(timer);if(slides.length>1)timer=setInterval(()=>show(current+1),4000)}
   restart();
 })();
+
+
+// Membership and pass selection
+(() => {
+  const options=[...document.querySelectorAll(".selectable-option")];
+  if(!options.length) return;
+  options.forEach(card=>{
+    card.addEventListener("click",(e)=>{
+      if(e.target.closest("a,button")) return;
+      const group=card.closest(".membership-cards,.prepaid-cards,.pass-cards");
+      if(!group) return;
+      group.querySelectorAll(".selectable-option").forEach(item=>item.classList.remove("selected"));
+      card.classList.add("selected");
+    });
+  });
+})();
