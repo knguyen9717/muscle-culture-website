@@ -136,3 +136,7 @@
 .regular-price strong{font:800 14px/1 "Barlow Condensed",sans-serif;color:#e51b23;letter-spacing:.05em}
 .founder-rate-note{margin:0 0 8px!important;font-size:13px!important;color:#aaa!important}
 @media(max-width:800px){.regular-price{gap:10px}.regular-price-label{width:100%}}
+
+/* Make regular membership price unmistakable */
+.regular-price del{font-size:25px!important;font-weight:900!important;color:#d8d8d8!important;text-decoration-color:#e51b23!important;text-decoration-thickness:3px!important;text-decoration-skip-ink:none}
+.regular-price-label{color:#b8b8b8!important}
