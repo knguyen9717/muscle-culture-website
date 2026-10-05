@@ -463,3 +463,11 @@ body.mobile-menu-open{overflow:hidden}
  .mobile-menu-toggle.open span:nth-child(1){transform:translateY(10px) rotate(45deg)}
  .mobile-menu-toggle.open span:nth-child(3){transform:translateY(-10px) rotate(-45deg)}
 }
+
+/* Brand statement in the Why Muscle Culture intro only */
+.why-editorial-intro.why-brand-statement{max-width:520px;color:#ccc;font-size:18px;line-height:1.6}
+.why-brand-statement h3{margin:0 0 18px;font:800 clamp(28px,2.5vw,36px)/1.05 "Barlow Condensed",sans-serif;letter-spacing:.4px;color:#fff}
+.why-brand-statement h3 span{color:var(--red)}
+.why-brand-statement p{margin:0 0 12px}
+.why-brand-statement .why-brand-values{margin-bottom:0;color:#f4f4f4;font-weight:600}
+@media(max-width:560px){.why-editorial-intro.why-brand-statement{font-size:17px}}
