@@ -84,7 +84,7 @@
         <p>Permanent founder status</p>
         <p>First body scan + guest pass planned</p>
       </div>
-      <a class="btn" href="#contact">JOIN THE FOUNDING 100</a>
+      <a class="btn plan-cta" href="#contact" data-plan="Founding 100">JOIN THE FOUNDING 100</a>
     </article>
 
     <article class="membership-card selectable-option" data-plan="Regular">
@@ -102,7 +102,7 @@
         <p>Member events + community access</p>
         <p>Eligibility for Competitor Wall</p>
       </div>
-      <a class="btn btn-ghost" href="#contact">JOIN THE WAITLIST</a>
+      <a class="btn btn-ghost plan-cta" href="#contact" data-plan="Regular">JOIN THE WAITLIST</a>
     </article>
 
     <article class="membership-card vip-tier selectable-option" data-plan="VIP">
@@ -120,7 +120,7 @@
         <p>Future recovery-service benefits planned</p>
         <p>Eligibility for Competitor Wall</p>
       </div>
-      <a class="btn btn-ghost" href="#contact">JOIN THE VIP WAITLIST</a>
+      <a class="btn btn-ghost plan-cta" href="#contact" data-plan="VIP">JOIN THE VIP WAITLIST</a>
     </article>
   </div>
   <div class="prepaid-section">
@@ -215,7 +215,18 @@
 <section id="contact" class="cta section">
   <p class="eyebrow">LINCOLN, NEBRASKA</p><h2>BE THERE FROM<br><span>THE BEGINNING.</span></h2>
   <p>We're building the waitlist while we finalize the location and opening plan.</p>
-  <form id="waitlist"><input type="text" placeholder="YOUR NAME" required><input type="email" placeholder="EMAIL ADDRESS" required><button class="btn" type="submit">JOIN THE WAITLIST</button></form>
+  <form id="waitlist">
+    <input type="text" name="name" placeholder="YOUR NAME" required>
+    <input type="email" name="email" placeholder="EMAIL ADDRESS" required>
+    <select id="membership-interest" name="membership_interest" required aria-label="Membership interest">
+      <option value="">SELECT MEMBERSHIP INTEREST</option>
+      <option value="Founding 100">FOUNDING 100 — $65/MONTH</option>
+      <option value="Regular">REGULAR — $85/MONTH</option>
+      <option value="VIP">VIP — $100/MONTH</option>
+      <option value="Not Sure Yet">NOT SURE YET</option>
+    </select>
+    <button class="btn" type="submit">JOIN THE WAITLIST</button>
+  </form>
   <p id="form-message" class="fine"></p>
 </section>
 </main>
