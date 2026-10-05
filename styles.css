@@ -439,3 +439,17 @@
 .progress-showcase{background:#050505;padding:70px 4vw;border-top:1px solid #1d1d1d;border-bottom:1px solid #1d1d1d;display:flex;justify-content:center}
 .progress-showcase img{display:block;width:min(100%,1700px);height:auto;border:1px solid #252525;box-shadow:0 22px 60px #000a}
 @media(max-width:800px){.progress-showcase{padding:42px 0}.progress-showcase img{width:100%;border-left:0;border-right:0}}
+
+/* Mobile navigation */
+.mobile-menu-toggle,.mobile-nav{display:none}
+@media(max-width:800px){
+.nav{padding:0 18px}.brand-logo{width:min(235px,64vw)!important;height:auto}
+.mobile-menu-toggle{display:flex;width:48px;height:48px;padding:11px;border:0;background:transparent;flex-direction:column;justify-content:center;gap:6px;cursor:pointer;z-index:72}
+.mobile-menu-toggle span{display:block;width:26px;height:2px;background:#fff;transition:transform .25s,opacity .2s}
+.mobile-menu-toggle.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}.mobile-menu-toggle.open span:nth-child(2){opacity:0}.mobile-menu-toggle.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.mobile-nav{display:flex;position:fixed;z-index:60;top:74px;left:0;right:0;max-height:0;overflow:hidden;opacity:0;pointer-events:none;background:rgba(5,5,5,.985);border-bottom:1px solid #292929;flex-direction:column;transition:max-height .32s ease,opacity .22s ease;box-shadow:0 18px 40px rgba(0,0,0,.55)}
+.mobile-nav.open{max-height:calc(100vh - 74px);opacity:1;pointer-events:auto;overflow-y:auto}
+.mobile-nav>a{display:flex;align-items:center;min-height:54px;padding:0 24px;border-bottom:1px solid #1c1c1c;font:800 18px "Barlow Condensed",sans-serif;letter-spacing:1px;color:#eee}
+.mobile-nav .mobile-nav-cta{justify-content:center;margin:18px 20px 22px;min-height:54px;padding:14px 18px;background:linear-gradient(#ef1b23,#c90b13);border:1px solid var(--red);color:#fff}
+body.mobile-menu-open{overflow:hidden}
+}
