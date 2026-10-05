@@ -1,7 +1,19 @@
 document.getElementById("year").textContent=new Date().getFullYear();
+
+const membershipSelect=document.getElementById("membership-interest");
+document.querySelectorAll(".plan-cta").forEach(button=>{
+  button.addEventListener("click",()=>{
+    if(membershipSelect){
+      membershipSelect.value=button.dataset.plan || "";
+      membershipSelect.dispatchEvent(new Event("change"));
+    }
+  });
+});
+
 document.getElementById("waitlist").addEventListener("submit",(e)=>{
   e.preventDefault();
-  document.getElementById("form-message").textContent="WAITLIST FORM DEMO — we'll connect this to a real signup system before launch.";
+  const plan=membershipSelect?.value || "Not selected";
+  document.getElementById("form-message").textContent="WAITLIST FORM DEMO — "+plan+" selected. We'll connect this form to a real signup database before promotion.";
 });
 
 // Athlete carousel
