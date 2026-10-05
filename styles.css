@@ -434,3 +434,8 @@
 .progress-visual{border:1px solid #333;background:#050505;overflow:hidden;box-shadow:0 18px 50px #0008}
 .progress-visual img{display:block;width:100%;height:auto;object-fit:cover}
 @media(max-width:800px){.progress-visual{margin-top:36px}}
+
+/* Full-width Progress Station showcase */
+.progress-showcase{background:#050505;padding:70px 4vw;border-top:1px solid #1d1d1d;border-bottom:1px solid #1d1d1d;display:flex;justify-content:center}
+.progress-showcase img{display:block;width:min(100%,1700px);height:auto;border:1px solid #252525;box-shadow:0 22px 60px #000a}
+@media(max-width:800px){.progress-showcase{padding:42px 0}.progress-showcase img{width:100%;border-left:0;border-right:0}}
