@@ -453,3 +453,13 @@
 .mobile-nav .mobile-nav-cta{justify-content:center;margin:18px 20px 22px;min-height:54px;padding:14px 18px;background:linear-gradient(#ef1b23,#c90b13);border:1px solid var(--red);color:#fff}
 body.mobile-menu-open{overflow:hidden}
 }
+
+/* Mobile header: menu on left, larger tap target */
+@media(max-width:800px){
+ .nav{justify-content:flex-start;gap:8px}
+ .nav .logo-lockup{order:2}
+ .mobile-menu-toggle{order:1;width:52px;height:52px;padding:10px 12px;margin-left:-8px;gap:7px;flex:0 0 52px}
+ .mobile-menu-toggle span{width:30px;height:3px;border-radius:2px}
+ .mobile-menu-toggle.open span:nth-child(1){transform:translateY(10px) rotate(45deg)}
+ .mobile-menu-toggle.open span:nth-child(3){transform:translateY(-10px) rotate(-45deg)}
+}
