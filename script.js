@@ -61,3 +61,20 @@ document.getElementById("waitlist").addEventListener("submit",(e)=>{
     });
   });
 })();
+
+
+// Mobile navigation
+(() => {
+ const toggle=document.querySelector(".mobile-menu-toggle");
+ const menu=document.querySelector(".mobile-nav");
+ if(!toggle || !menu) return;
+ const setOpen=(open)=>{
+  toggle.classList.toggle("open",open); menu.classList.toggle("open",open);
+  toggle.setAttribute("aria-expanded",String(open)); menu.setAttribute("aria-hidden",String(!open));
+  document.body.classList.toggle("mobile-menu-open",open);
+ };
+ toggle.addEventListener("click",()=>setOpen(!menu.classList.contains("open")));
+ menu.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>setOpen(false)));
+ document.addEventListener("keydown",e=>{if(e.key==="Escape")setOpen(false)});
+ window.addEventListener("resize",()=>{if(window.innerWidth>800)setOpen(false)});
+})();
