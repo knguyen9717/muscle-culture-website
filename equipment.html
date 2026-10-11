@@ -43,6 +43,10 @@
 .mc-muscle-icon.mc-anatomy-icon img{display:block;width:88px;max-width:95%;height:66px;object-fit:contain}
 .mc-muscle-tab{min-height:132px}
 @media(max-width:580px){.mc-muscle-tab{min-height:116px}.mc-muscle-icon.mc-anatomy-icon img{width:78px;height:60px}}
+
+/* Let the tab background show through the black areas of the anatomy artwork. */
+.mc-muscle-icon.mc-anatomy-icon img{mix-blend-mode:screen}
+.mc-muscle-tab.is-active{background:#202020;border-color:#e43636;box-shadow:inset 0 0 0 1px rgba(228,54,54,.25)}
 </style>
 </head>
 <body>
