@@ -21,7 +21,7 @@
 .mc-panel-heading{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:0 0 20px;border-bottom:1px solid #383838;padding-bottom:18px}
 .mc-panel-heading h3{font:900 clamp(30px,4vw,48px) 'Barlow Condensed',sans-serif;margin:4px 0 0}
 .mc-panel-heading>span{font:600 12px Inter,sans-serif;color:#aaa}
-.mc-equipment-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.mc-equipment-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 .mc-machine{overflow:hidden;background:#1c1c1c;border:1px solid #333;border-radius:10px}
 .mc-machine-photo{aspect-ratio:4/3;position:relative;background:#292929;display:grid;place-items:center}
 .mc-machine-photo img{width:100%;height:100%;object-fit:contain;display:block;background:#f0f0f0}
@@ -29,11 +29,11 @@
 .mc-photo-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#888}
 .mc-photo-placeholder[hidden]{display:none}
 .mc-photo-placeholder span{font-size:56px}.mc-photo-placeholder small{font:700 11px Inter,sans-serif;letter-spacing:.12em}
-.mc-machine-info{padding:17px 18px;display:flex;justify-content:space-between;gap:12px;align-items:start}
-.mc-machine-info h4{font:800 19px 'Barlow Condensed',sans-serif;margin:0;line-height:1.2}
+.mc-machine-info{padding:12px 10px;display:flex;justify-content:space-between;gap:12px;align-items:start}
+.mc-machine-info h4{font:800 17px 'Barlow Condensed',sans-serif;margin:0;line-height:1.2}
 .mc-machine-info span{font:700 10px Inter,sans-serif;letter-spacing:.08em;color:#aaa;white-space:nowrap}
-@media(max-width:950px){.mc-muscle-tabs{grid-template-columns:repeat(4,minmax(0,1fr))}.mc-equipment-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:580px){.mc-catalog-interactive{padding:28px 16px 60px}.mc-muscle-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.mc-muscle-tab{min-height:86px}.mc-equipment-grid{grid-template-columns:1fr}.mc-panel-heading{align-items:start;flex-direction:column}}
+@media(max-width:950px){.mc-muscle-tabs{grid-template-columns:repeat(4,minmax(0,1fr))}.mc-equipment-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:580px){.mc-catalog-interactive{padding:28px 16px 60px}.mc-muscle-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.mc-muscle-tab{min-height:86px}.mc-equipment-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.mc-machine-info{flex-direction:column;gap:6px}.mc-machine-info h4{font-size:16px}.mc-panel-heading{align-items:start;flex-direction:column}}
 
 
 .mc-machine-photo .mc-brand-watermark{position:absolute;right:12px;bottom:12px;width:58px;height:58px;object-fit:contain;background:rgba(10,10,10,.68);padding:6px;border-radius:9px;z-index:3;pointer-events:none;filter:drop-shadow(0 2px 4px rgba(0,0,0,.5))}
