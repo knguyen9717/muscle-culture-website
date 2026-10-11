@@ -47,6 +47,9 @@
 /* Let the tab background show through the black areas of the anatomy artwork. */
 .mc-muscle-icon.mc-anatomy-icon img{mix-blend-mode:screen}
 .mc-muscle-tab.is-active{background:#202020;border-color:#e43636;box-shadow:inset 0 0 0 1px rgba(228,54,54,.25)}
+
+/* Knock out the dark rectangular image background instead of blending it. */
+.mc-muscle-icon.mc-anatomy-icon img{mix-blend-mode:normal;filter:url(#mc-remove-icon-bg)}
 </style>
 </head>
 <body>
@@ -59,6 +62,7 @@
   <div class="mobile-nav" id="mobile-navigation" aria-hidden="true"><a href="index.html#top">HOME</a><a href="index.html#about">ABOUT</a><a href="index.html#founders">MEMBERSHIP</a><a href="index.html#athletes">ATHLETES</a><a href="culture.html">THE CULTURE</a><a href="gallery.html">GALLERY</a><a href="index.html#contact">CONTACT</a><a class="mobile-nav-cta" href="index.html#founders">JOIN THE FOUNDING 100</a></div>
 
 
+<svg aria-hidden="true" width="0" height="0" style="position:absolute;pointer-events:none"><defs><filter id="mc-remove-icon-bg" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  .035 .035 .035 0 -4.7"/></filter></defs></svg>
 <main class="equipment-page">
 <section class="equipment-hero">
   <div class="equipment-hero-copy">
