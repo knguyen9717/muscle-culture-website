@@ -485,7 +485,7 @@ body.mobile-menu-open{overflow:hidden}
 
 /* Transparent LNK Physique logo on the site's dark surfaces. */
 .nav .logo-lockup:has(.brand-logo), footer a:has(.footer-logo), .hero-brand:has(.hero-brand-logo){background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;overflow:visible!important;isolation:auto!important}
-.brand-logo,.hero-brand-logo,.footer-logo{display:block;object-fit:contain;background:transparent!important;filter:invert(1) hue-rotate(180deg)!important;mix-blend-mode:normal!important}
+.brand-logo,.hero-brand-logo,.footer-logo{display:block;object-fit:contain;background:transparent!important;filter:url(#lnk-logo-colors)!important;mix-blend-mode:normal!important}
 .brand-logo{width:220px;max-width:100%;max-height:70px}
 .hero-brand-logo{width:min(560px,82vw);max-height:300px}
 .footer-logo{width:210px;max-height:85px}
