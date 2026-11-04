@@ -497,3 +497,8 @@ body.mobile-menu-open{overflow:hidden}
  .nav .logo-lockup .brand-logo{display:block!important;width:100%!important;max-width:100%!important;height:100%!important;max-height:52px!important;object-fit:contain!important;object-position:center!important}
 }
 @media(max-width:380px){.nav .logo-lockup:has(.brand-logo){width:155px!important;height:54px!important}}
+
+/* Remove white pixels from the uploaded logo and render black lettering in white on dark backgrounds. */
+.logo-lockup:has(.brand-logo),footer a:has(.footer-logo),.hero-brand:has(.hero-brand-logo){background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;border-radius:0!important;overflow:visible!important}
+.brand-logo,.footer-logo,.hero-brand-logo{filter:url(#lnk-logo-knockout)!important;background:transparent!important}
+@media(max-width:800px){.nav .logo-lockup:has(.brand-logo){background:transparent!important;padding:0!important;border:0!important;box-shadow:none!important}}
