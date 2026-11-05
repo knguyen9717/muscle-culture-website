@@ -50,6 +50,18 @@
 
 /* Knock out the dark rectangular image background instead of blending it. */
 .mc-muscle-icon.mc-anatomy-icon img{mix-blend-mode:normal;filter:url(#mc-remove-icon-bg)}
+
+/* Equipment image preview: hover magnification and accessible full-size lightbox. */
+.mc-machine-photo:has(>img:not([hidden])){cursor:zoom-in}
+.mc-machine-photo>img:not(.mc-brand-watermark){transition:transform .25s ease}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.mc-machine-photo:hover>img:not([hidden]){transform:scale(1.13)}}
+.mc-machine-photo:focus-visible{outline:3px solid #e43636;outline-offset:-3px}
+.mc-zoom-modal[hidden]{display:none!important}
+.mc-zoom-modal{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.93);display:flex;align-items:center;justify-content:center;padding:64px 24px 48px}
+.mc-zoom-modal img{display:block;max-width:100%;max-height:calc(100dvh - 135px);object-fit:contain;background:#fff;border-radius:5px}
+.mc-zoom-close{position:absolute;top:15px;right:20px;background:#242424;color:#fff;border:1px solid #777;border-radius:50%;width:46px;height:46px;font-size:30px;line-height:1;cursor:pointer}
+.mc-zoom-caption{position:absolute;bottom:12px;left:20px;right:20px;text-align:center;color:#fff;font:700 16px 'Barlow Condensed',sans-serif}
+@media(prefers-reduced-motion:reduce){.mc-machine-photo>img{transition:none!important}}
 </style>
 </head>
 <body>
@@ -122,6 +134,7 @@
   <p>Lincoln, Nebraska • Premium 24/7 bodybuilding club • Coming soon</p>
   <p>© <span id="year"></span> LNK Physique. Concept website.</p>
 </footer>
+<div class="mc-zoom-modal" id="mc-zoom-modal" role="dialog" aria-modal="true" aria-label="Equipment photo enlarged" hidden><button type="button" class="mc-zoom-close" aria-label="Close enlarged photo">×</button><img alt=""><div class="mc-zoom-caption"></div></div>
 <script src="script.js"></script>
 <script>
 (function(){
@@ -129,6 +142,31 @@ const tabs=[...document.querySelectorAll('.mc-muscle-tab')];
 const panels=[...document.querySelectorAll('.mc-gallery-panel')];
 function activate(tab,focus){tabs.forEach(t=>{const active=t===tab;t.classList.toggle('is-active',active);t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1});panels.forEach(p=>p.hidden=p.id!=='mc-panel-'+tab.dataset.group);if(focus)tab.focus()}
 tabs.forEach((tab,i)=>{tab.tabIndex=i===0?0:-1;tab.addEventListener('click',()=>activate(tab,false));tab.addEventListener('keydown',e=>{if(!['ArrowRight','ArrowLeft','Home','End'].includes(e.key))return;e.preventDefault();const next=e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;activate(tabs[next],true)})});
+})();
+</script>
+<script>
+(function(){
+const modal=document.getElementById('mc-zoom-modal');
+const preview=modal.querySelector('img'),caption=modal.querySelector('.mc-zoom-caption'),close=modal.querySelector('button');
+let previousFocus=null;
+function openZoom(photo){
+ const img=photo.querySelector('img:not([hidden])');
+ if(!img||!img.complete||img.naturalWidth===0)return;
+ previousFocus=document.activeElement;
+ preview.src=img.currentSrc||img.src;
+ preview.alt=img.alt||'Equipment photo';
+ caption.textContent=photo.closest('.mc-machine')?.querySelector('.mc-machine-info h4')?.textContent||img.alt;
+ modal.hidden=false;document.body.style.overflow='hidden';close.focus();
+}
+function closeZoom(){modal.hidden=true;preview.removeAttribute('src');document.body.style.overflow='';if(previousFocus?.isConnected)previousFocus.focus()}
+document.querySelectorAll('.mc-machine-photo').forEach(photo=>{
+ photo.tabIndex=0;photo.setAttribute('role','button');photo.setAttribute('aria-label','Enlarge equipment photo');
+ photo.addEventListener('click',()=>openZoom(photo));
+ photo.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openZoom(photo)}});
+});
+close.addEventListener('click',closeZoom);
+modal.addEventListener('click',e=>{if(e.target===modal)closeZoom()});
+document.addEventListener('keydown',e=>{if(modal.hidden)return;if(e.key==='Escape')closeZoom();if(e.key==='Tab'){e.preventDefault();close.focus()}});
 })();
 </script>
 </body>
