@@ -495,3 +495,7 @@ body.mobile-menu-open{overflow:hidden}
 /* Replace only the first Plate Loaded card in the existing equipment showcase artwork. */
 .equipment-mockup-link{position:relative}
 .equipment-mockup-link img.equipment-plate-poster-overlay{position:absolute;left:2.38%;top:3.7%;width:43.33%;height:auto;aspect-ratio:3/4;object-fit:fill;max-width:none;margin:0;z-index:1}
+
+/* Hero image contains baked-in headline text. Mask its left text area so only the live HTML headline is visible. */
+.hero{background-image:linear-gradient(90deg,#050505 0%,#050505 58%,rgba(5,5,5,.98) 66%,rgba(5,5,5,.55) 77%,rgba(5,5,5,.04) 100%),url("assets/lnk-community-hero.png")!important}
+@media(max-width:800px){.hero{background-image:linear-gradient(90deg,#050505 0%,#050505 62%,rgba(5,5,5,.94) 76%,rgba(5,5,5,.22) 100%),url("assets/lnk-community-hero.png")!important}}
