@@ -491,3 +491,7 @@ body.mobile-menu-open{overflow:hidden}
 .footer-logo{width:210px;max-height:85px}
 @media(max-width:800px){.nav .logo-lockup:has(.brand-logo){flex:0 0 auto!important;width:174px!important;max-width:calc(100vw - 105px)!important;height:58px!important;margin:0!important;align-self:center!important;justify-content:center!important}.nav .brand-logo{width:100%!important;height:100%!important;max-height:52px!important}.hero-brand-logo{width:min(460px,88vw)}}
 @media(max-width:380px){.nav .logo-lockup:has(.brand-logo){width:155px!important;height:54px!important}}
+
+/* Replace only the first Plate Loaded card in the existing equipment showcase artwork. */
+.equipment-mockup-link{position:relative}
+.equipment-mockup-link img.equipment-plate-poster-overlay{position:absolute;left:2.38%;top:3.7%;width:43.33%;height:auto;aspect-ratio:3/4;object-fit:fill;max-width:none;margin:0;z-index:1}
