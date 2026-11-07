@@ -499,3 +499,26 @@ body.mobile-menu-open{overflow:hidden}
 /* Hero image contains baked-in headline text. Mask its left text area so only the live HTML headline is visible. */
 .hero{background-image:linear-gradient(90deg,#050505 0%,#050505 58%,rgba(5,5,5,.98) 66%,rgba(5,5,5,.55) 77%,rgba(5,5,5,.04) 100%),url("assets/lnk-community-hero.png")!important}
 @media(max-width:800px){.hero{background-image:linear-gradient(90deg,#050505 0%,#050505 62%,rgba(5,5,5,.94) 76%,rgba(5,5,5,.22) 100%),url("assets/lnk-community-hero.png")!important}}
+
+/* Independent equipment cards — no composite image or overlay */
+.equipment-cards-section{background:radial-gradient(circle at 50% 30%,#151515,#050505 75%);padding:76px max(24px,5vw) 90px;border-block:1px solid #242424}
+.equipment-cards-heading{max-width:1160px;margin:0 auto 30px;text-align:center}
+.equipment-cards-heading h2{font:900 clamp(46px,6vw,80px)/.95 "Barlow Condensed",sans-serif;margin:12px 0;color:#fff}
+.equipment-cards-heading h2 span{color:var(--red)}
+.equipment-cards-heading>p:last-child{color:#aaa;font-size:15px;line-height:1.6}
+.equipment-cards-grid{max-width:1250px;margin:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch}
+.equipment-feature-card{display:flex;flex-direction:column;min-width:0;aspect-ratio:3/4;overflow:hidden;position:relative;border:1px solid #7d2529;border-radius:12px;background:linear-gradient(145deg,#161616,#080808 70%,#270507);transition:border-color .2s,transform .2s}
+.equipment-feature-card:hover{border-color:#f22;transform:translateY(-3px)}
+.equipment-feature-poster img{display:block;width:100%;height:100%;object-fit:fill}
+.equipment-feature-photo{height:61%;overflow:hidden;position:relative}
+.equipment-feature-photo:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#080808)}
+.equipment-feature-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.equipment-feature-copy{padding:0 8% 7%;margin-top:-13%;position:relative;z-index:1;display:flex;flex-direction:column;flex:1}
+.equipment-feature-number{position:absolute;right:8%;top:-45%;font:900 clamp(65px,9vw,145px)/1 "Barlow Condensed";color:#ffffff2b}
+.equipment-feature-copy h3{font:900 clamp(26px,3vw,42px)/1 "Barlow Condensed";color:#fff;margin:0 0 15px}
+.equipment-feature-copy i{display:block;background:var(--red);width:55px;height:4px;margin-bottom:16px}
+.equipment-feature-copy p{font:400 clamp(12px,1.1vw,15px)/1.5 Inter,sans-serif;color:#bbb;margin:0 0 20px}
+.equipment-feature-copy strong{margin-top:auto;font:800 20px "Barlow Condensed";color:#fff}
+.equipment-feature-copy strong span{color:var(--red);margin-left:12px}
+@media(max-width:800px){.equipment-cards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.equipment-feature-copy h3{font-size:30px}}
+@media(max-width:520px){.equipment-cards-section{padding:55px 18px}.equipment-cards-grid{grid-template-columns:1fr;max-width:420px}.equipment-feature-copy h3{font-size:38px}.equipment-feature-copy p{font-size:15px}}
