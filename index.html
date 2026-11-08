@@ -182,6 +182,9 @@
   <form id="waitlist">
     <input type="text" name="name" placeholder="YOUR NAME" required>
     <input type="email" name="email" placeholder="EMAIL ADDRESS" required>
+    <input type="tel" name="phone" placeholder="PHONE NUMBER" autocomplete="tel" inputmode="tel" minlength="7" required aria-label="Phone number">
+    <input type="text" name="city" placeholder="CITY" autocomplete="address-level2" required aria-label="City">
+    <input type="text" name="zip" placeholder="ZIP CODE" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" title="Enter a 5-digit ZIP code (or ZIP+4)" required aria-label="ZIP code">
     <select id="membership-interest" name="membership_interest" required aria-label="Membership interest">
       <option value="">SELECT MEMBERSHIP INTEREST</option>
       <option value="Founding 100">FOUNDING 100 — $70/MONTH</option>
