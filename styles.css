@@ -543,3 +543,10 @@ body.mobile-menu-open{overflow:hidden}
     background-position:center center,right center!important;
   }
 }
+
+/* Waitlist: balanced required contact fields across desktop and mobile. */
+.cta #waitlist{max-width:960px;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.cta #waitlist input,.cta #waitlist select{min-width:0;width:100%;box-sizing:border-box}
+.cta #waitlist button{grid-column:1/-1;justify-self:center;min-width:260px}
+@media(max-width:700px){.cta #waitlist{grid-template-columns:1fr 1fr}.cta #waitlist select{grid-column:1/-1}}
+@media(max-width:520px){.cta #waitlist{grid-template-columns:1fr}.cta #waitlist select{grid-column:auto}.cta #waitlist button{width:100%;min-width:0}}
